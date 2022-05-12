@@ -23,11 +23,11 @@ public class MyFrame extends JFrame {
 
         // vytvoření GUI
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("My Clock program");
+        this.setTitle("Hodiny");
         this.setLayout(new FlowLayout());
         this.setSize(380, 220);
         this.setResizable(false);
-        this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null); // zobrazení Gui na středu
 
         // vytvoření formátu
         timeFormat = new SimpleDateFormat("hh:mm:ss a");
