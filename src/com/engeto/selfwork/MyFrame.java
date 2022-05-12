@@ -17,9 +17,11 @@ public class MyFrame extends JFrame {
     String time;
     String day;
     String date;
-    Color color = new Color(0x4E25B0);
+    Color color = new Color(0x4E25B0); // jedna barva pro všechno, lepší než dokola vytvářet setForeground(new Color()); ....
 
     MyFrame(){
+
+        // vytvoření GUI
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("My Clock program");
         this.setLayout(new FlowLayout());
@@ -27,22 +29,27 @@ public class MyFrame extends JFrame {
         this.setResizable(false);
         this.setLocationRelativeTo(null);
 
+        // vytvoření formátu
         timeFormat = new SimpleDateFormat("hh:mm:ss a");
         dayFormat = new SimpleDateFormat("EEEE");
         dateFormat = new SimpleDateFormat("d.MMMMM yyyy");
 
+        // nastavení času
         timeLabel = new JLabel();
         timeLabel.setFont(new Font("Verdana", Font.PLAIN,50));
         timeLabel.setForeground(color);
 
+        // nastavení dne
         dayLabel = new JLabel();
         dayLabel.setFont(new Font("Serif", Font.PLAIN,35));
         dayLabel.setForeground(color);
 
+        // nastavení data
         dateLabel = new JLabel();
         dateLabel.setFont(new Font("Serif", Font.PLAIN, 45));
         dateLabel.setForeground(color);
 
+        // viditelnost
         this.add(timeLabel);
         this.add(dayLabel);
         this.add(dateLabel);
